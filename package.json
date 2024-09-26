@@ -1,8 +1,7 @@
 {
-  "name": "@sjmc11/tourguidejs",
-  "version": "0.0.17",
+  "name": "@fjperales/tourguidejsfix",
+  "version": "0.0.1",
   "description": "A customizable tour guide library for front-end applications.",
-  "homepage": "https://tourguidejs.com",
   "main": "dist/tour.js",
   "types": "src/Tour.d.ts",
   "scripts": {
@@ -13,7 +12,7 @@
   "keywords": [
     "tour"
   ],
-  "author": "JC",
+  "author": "FJ",
   "license": "MIT",
   "dependencies": {
     "@floating-ui/dom": "^1.0.3",
@@ -31,6 +30,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sjmc11/tourguide-js"
+    "url": "https://github.com/fjperales/tourguide-js-fix.git"
   }
 }
