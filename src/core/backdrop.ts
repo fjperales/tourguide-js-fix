@@ -32,9 +32,10 @@ function computeBackdropPosition(tgInstance : TourGuideClient){
         if(typeof tgInstance.options.targetPadding === "undefined") return reject("Options failed to initialize")
         if(!tgInstance.backdrop) return reject("No backdrop element initialized")
 
-        const stepData = tgInstance.tourSteps[tgInstance.activeStep]
-        const targetElem = stepData.target as HTMLElement
-        const targetElemRect = targetElem.getBoundingClientRect()
+            const stepData = tgInstance.tourSteps[tgInstance.activeStep]
+            const targetElem = stepData.target as HTMLElement
+            //const targetElemRect = targetElem.getBoundingClientRect()
+            const targetElemRect = typeof stepData.target === 'string' ? document.querySelector(stepData.target).getBoundingClientRect() : (stepData.target as HTMLElement).getBoundingClientRect();
 
         // if backdrop overlay extends window width with padding - do not apply additional padding if overflows
         const isOverflow = (targetElemRect.width + tgInstance.options.targetPadding) > document.documentElement.clientWidth
